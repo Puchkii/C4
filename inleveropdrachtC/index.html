@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Eindopdracht C</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+  
+  <div ng-app='app' ng-controller='bedrijfsCtrl'>
+    <table class="table">
+      <tr>
+          <th ng-click="('bedrijfsnaam')">bedrijfsnaam</th>
+          <th ng-click="('adres')">adres</th>
+          <th ng-click="('woonplaats')">woonplaats</th>
+          <th ng-click="('telnr')">telnr</th>
+      </tr>
+      <tr ng-repeat="b in bedrijf">
+        {{b}}
+        <td>{{ b.bedrijfsnaam }}</td>
+        <td>{{ b.adres }}</td>
+        <td>{{ b.woonplaats }}</td>
+        <td>{{ b.telnr }}</td>
+      </tr>
+  </table>
+  </div>
+  
+  
+</body>
+
+</html>
